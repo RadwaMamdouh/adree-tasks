@@ -1,0 +1,64 @@
+@use './functions' as *;
+
+$spacing-values: (0, 4, 8, 10, 12, 14, 16, 18, 20, 24, 28, 30, 32, 48);
+
+@each $value in $spacing-values {
+  // Padding
+  .p_#{$value} {
+    padding: #{$value}px;
+  }
+  .pbs_#{$value} {
+    -webkit-padding-before: #{$value}px;
+    padding-block-start: #{$value}px;
+  }
+  .pbe_#{$value} {
+    -webkit-padding-after: #{$value}px;
+    padding-block-end: #{$value}px;
+  }
+  .pis_#{$value} {
+    -webkit-padding-start: #{$value}px;
+    padding-inline-start: #{$value}px;
+  }
+  .pie_#{$value} {
+    -webkit-padding-end: #{$value}px;
+    padding-inline-end: #{$value}px;
+  }
+
+  // Margin
+  .m_#{$value} {
+    margin: #{$value}px;
+  }
+  .mbs_#{$value} {
+    -webkit-margin-before: #{$value}px;
+    margin-block-start: #{$value}px;
+  }
+  .mbe_#{$value} {
+    -webkit-margin-after: #{$value}px;
+    margin-block-end: #{$value}px;
+  }
+  .mis_#{$value} {
+    -webkit-margin-start: #{$value}px;
+    margin-inline-start: #{$value}px;
+  }
+  .mie_#{$value} {
+    -webkit-margin-end: #{$value}px;
+    margin-inline-end: #{$value}px;
+  }
+
+  // Font Size
+  .fs_#{$value} {
+    font-size: px_rem($value);
+  }
+
+  // Gap
+  .gap_#{$value} {
+    gap: #{$value}px;
+  }
+}
+
+// Font Weight
+@for $i from 100 through 900 {
+  .fw_#{$i} {
+    font-weight: #{$i};
+  }
+}

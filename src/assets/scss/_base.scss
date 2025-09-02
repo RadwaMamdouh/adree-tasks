@@ -1,0 +1,110 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  #{$ltr} & {
+    direction: ltr;
+  }
+
+  #{$rtl} & {
+    direction: rtl;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-align: start;
+  background-color: #f8f9fc;
+  @include transition(0.3s);
+}
+
+main {
+  min-height: calc(100vh - 92px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+*::-webkit-input-placeholder {
+  font-size: px_rem(14);
+  font-weight: 400;
+  color: #ccc;
+}
+
+*::-moz-placeholder {
+  font-size: px_rem(14);
+  font-weight: 400;
+  color: #ccc;
+}
+
+*:-ms-input-placeholder {
+  font-size: px_rem(14);
+  font-weight: 400;
+  color: #ccc;
+}
+
+*::-ms-input-placeholder {
+  font-size: px_rem(14);
+  font-weight: 400;
+  color: #ccc;
+}
+
+*::placeholder {
+  font-size: px_rem(14);
+  font-weight: 400;
+  color: #ccc;
+}
+
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.3rem;
+}
+
+body::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+  background-color: #fffefe;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c4cacf;
+  @include borderRadius(4px);
+}
+
+// Custom Scrollbar for Firefox
+@-moz-document url-prefix() {
+  *,
+  html,
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: #fffefe #c4cacf;
+  }
+}

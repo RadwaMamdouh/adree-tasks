@@ -1,0 +1,6 @@
+<div class="empty_data" [class]="classes()">
+  <img [src]="img() ?? '/img/no-tasks.svg'" alt="Empty Data" />
+  @if(title()){
+  <h5 class="fs_14 fw_500 muted text-center">{{ title() }}</h5>
+  }
+</div>

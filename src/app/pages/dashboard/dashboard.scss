@@ -1,0 +1,34 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.stats_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  @media (width <= 767.98px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+p-chart {
+  width: 100% !important;
+  height: 300px !important;
+}

@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Components SCSS
+@use 'assets/scss/components/header' as *;
+@use 'assets/scss/components/button' as *;
+@use 'assets/scss/components/badge' as *;
+
+// General
+@use 'assets/scss/vars' as *;
+@use 'assets/scss/functions' as *;
+@use 'assets/scss/mixins' as *;
+@use 'assets/scss/base' as *;
+@use 'assets/scss/utilities' as *;
+@use 'assets/scss/general' as *;
+
+@import 'primeicons/primeicons.css';

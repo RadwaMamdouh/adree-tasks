@@ -1,0 +1,14 @@
+<button
+  pButton
+  pRipple
+  [type]="type()"
+  class="button"
+  [class]="(styleType() | buttontype) + ' ' + classes()"
+  (click)="onEmitAction()"
+  [disabled]="disabled()"
+  [loading]="loading()"
+>
+  @if(label()) {
+  <span class="btn_label">{{ label() }}</span>
+  }
+</button>

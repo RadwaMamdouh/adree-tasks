@@ -1,0 +1,33 @@
+<header class="header">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center justify-content-start gap-3">
+        <a routerLink="/" class="logo">
+          <img src="img/task-logo.svg" alt="Tasks" />
+        </a>
+        <ul>
+          <li>
+            <a
+              routerLink="/tasks"
+              pRipple
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              Tasks
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/dashboard"
+              pRipple
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              Dashboard
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

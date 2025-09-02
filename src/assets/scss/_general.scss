@@ -1,0 +1,11 @@
+@use './mixins' as *;
+
+.divHolder {
+  padding: 24px;
+  background-color: var(--white);
+  @include borderRadius(8px);
+}
+
+.border_1 {
+  border: 1px solid var(--border);
+}

@@ -1,0 +1,65 @@
+<h1 class="fs_30 fw_700 primary mbe_20">Dashboard</h1>
+
+<div class="stats_cards">
+  <!-- Total Tasks -->
+  <div class="divHolder border_1 d-flex align-items-center justify-content-between gap-4">
+    <div>
+      <p class="fs_20 fw_700 dark">{{ totalTasks }}</p>
+      <h3 class="fs_14 fw_400 muted">Total Tasks</h3>
+    </div>
+    <app-icon [icon]="icons.task" />
+  </div>
+
+  <!-- Active Tasks -->
+  <div class="divHolder border_1 d-flex align-items-center justify-content-between gap-4">
+    <div>
+      <p class="fs_20 fw_700 dark">{{ tasksPerStatus['New'] || 0 }}</p>
+      <h3 class="fs_14 fw_400 muted">New Tasks</h3>
+    </div>
+    <app-icon [icon]="icons.star" classes="orange" />
+  </div>
+
+  <!-- New Tasks -->
+  <div class="divHolder border_1 d-flex align-items-center justify-content-between gap-4">
+    <div>
+      <p class="fs_20 fw_700 dark">{{ tasksPerStatus['Active'] || 0 }}</p>
+      <h3 class="fs_14 fw_400 muted">Active Tasks</h3>
+    </div>
+    <app-icon [icon]="icons.check" classes="success" />
+  </div>
+
+  <!-- Closed Tasks -->
+  <div class="divHolder border_1 d-flex align-items-center justify-content-between gap-4">
+    <div>
+      <p class="fs_20 fw_700 dark">{{ tasksPerStatus['Closed'] || 0 }}</p>
+      <h3 class="fs_14 fw_400 muted">Closed Tasks</h3>
+    </div>
+    <app-icon [icon]="icons.close" classes="dark" />
+  </div>
+</div>
+
+<!-- Display Charts -->
+<div class="charts">
+  <!-- Tasks by Status (Pie chart) -->
+  <div class="divHolder">
+    <h3 class="fs_18 fw_600 mbe_16 dark">Tasks by Status</h3>
+    @if(getStatusLength()){
+    <p-chart type="pie" [data]="taskStatusChartData" [options]="taskStatusChartOptions"></p-chart>
+    }@else {
+    <app-empty-data title="there are not tasks yet" img="/img/no-status.svg" classes="py-5" />
+    }
+  </div>
+
+  <!-- Tasks by Category (Bar chart) -->
+  <div class="divHolder">
+    <h3 class="fs_18 fw_600 mbe_16 dark">Tasks by Category</h3>
+    @if(getCatLength()){<p-chart
+      type="bar"
+      [data]="taskCategoryChartData"
+      [options]="taskCategoryChartOptions"
+    ></p-chart
+    >}@else {
+    <app-empty-data title="there are not tasks yet" img="/img/no-categories.svg" classes="py-5" />
+    }
+  </div>
+</div>

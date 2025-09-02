@@ -1,0 +1,37 @@
+// Directions
+$ltr: "[dir='ltr']";
+$rtl: "[dir='rtl']";
+
+// Colors
+$colors: (
+  'primary': #2644bc,
+  'secondary': #0aceae,
+  'text': #042544,
+  'border': #dce0e5,
+  'gray': #edf0f2,
+  'white': #fff,
+  'black': #000,
+  'success': #009646,
+  'danger': #d43a42,
+  'dark': #173a49,
+  'orange': #f77f00,
+  'muted': #808b9a,
+);
+
+:root {
+  @each $key, $value in $colors {
+    --#{"#{$key}"}: #{$value};
+  }
+}
+
+@each $key, $value in $colors {
+  .#{'#{$key}'} {
+    color: var(--#{$key});
+  }
+}
+
+@each $key, $value in $colors {
+  .bg_#{'#{$key}'} {
+    background-color: var(--#{$key});
+  }
+}

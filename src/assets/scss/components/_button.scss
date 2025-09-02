@@ -1,0 +1,23 @@
+@use '../mixins' as *;
+@use '../functions' as *;
+
+.button {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  @include borderRadius(4px);
+  border: 1px solid transparent !important;
+  font-size: px_rem(16);
+  line-height: 24px;
+
+  .btn_label {
+    font: inherit;
+  }
+
+  &.primaryBtn {
+    background-color: var(--primary) !important;
+    color: var(--white);
+  }
+}
