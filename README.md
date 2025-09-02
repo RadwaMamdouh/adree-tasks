@@ -76,23 +76,17 @@ This Angular application follows a **component-based** architecture. Key decisio
 
 ## Screenshots
 
-### Task List:
+## Task List:
 
 ![Task List Screenshot](./img/task-list-screenshot.png)
 
-### Task Edit Dialog:
+## Task Edit Dialog:
 
 ![Task Edit Screenshot](./img/task-edit-screenshot.png)
 
-### Dashboard:
+## Dashboard:
 
-![Task Edit Screenshot](./img/dashboard-screenshot.png)
-
-## Demo Video
-
-You can watch a short demo of the application below:
-
-![Demo Video](./videos/demo-video.mov)
+![Task Edit Screenshot](./img/dashboard-screenshot.png)ß
 
 ## Code scaffolding
 
